@@ -6,5 +6,7 @@ export function criarProdutoRoutes({ produtoController }) {
   router.get('/', produtoController.listar);
   router.get('/:id', produtoController.buscar);
   router.post('/', produtoController.criar);
+  router.put('/:id', produtoController.atualizar);
+  router.delete('/:id', produtoController.deletar);
   return router;
 }

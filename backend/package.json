@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "check": "node scripts/check.js"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +13,7 @@
   "private": true,
   "type": "module",
   "dependencies": {
+    "cors": "^2.8.6",
     "express": "^5.2.1",
     "mysql2": "^3.24.4"
   }

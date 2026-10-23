@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors';
 import { criarPool } from './config/database.js';
 import { criarProdutoModel } from './models/ProdutoModels.js';
 import { criarProdutoService } from './services/ProdutoService.js';
@@ -9,6 +10,7 @@ import { criarProdutoRoutes } from './routes/produtoRoutes.js';
 export const app = express();
 
 //Middleware: ensina o Express a ler o corpo da requisição em JSON
+app.use(cors());
 app.use(express.json());
 
 const pool = criarPool();
